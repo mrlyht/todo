@@ -1,0 +1,11 @@
+#!/bin/sh
+
+dir='/home/lucas/Documents/'
+file='stuff.todo'
+dirfile=${dir}${file}
+
+[ $# -eq 0 ] && {
+			 	vim ${dirfile} 
+} || {
+				echo "- ${@}" >> ${dirfile}
+}
